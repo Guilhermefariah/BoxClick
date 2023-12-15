@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="in-edge">
+    <title>JavaScript</title>
+    <style>
+        div#area {
+            font: normal 20pt arial;
+            background: #1234;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaction...
+    </div>
+
+    <script>
+            let passOne = window.document.getElementById('area')
+            passOne.addEventListener('click', click)
+            passOne.addEventListener('mouseenter', entry)
+            passOne.addEventListener('mouseout', exit)
+            function click(){
+                passOne.innerText='exit'
+                passOne.style.background = 'red'
+            }
+            function entry(){
+                passOne.innerText='click to enter'
+            }
+            function exit(){
+                passOne.innerText='start'
+                passOne.style.background = 'green'
+            }
+    </script>
+    
+</body>
+</html>
